@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+ <object name="ploomcake_core"
+    meta_type="Filesystem Directory View"
+    directory="ploomcake.core:skins/ploomcake_core"/>
+
+ <skin-path name="*" >
+  <layer name="ploomcake_core"
+     insert-after="custom"/>
+ </skin-path>
+
+</object>
+                  

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<portlets>
+    <assignment
+        manager="plone.rightcolumn"
+        category="context"
+        key="/"
+        type="collective.quickupload.QuickUploadPortlet"
+        name="quick">
+        <property name="header">Upload</property>
+    </assignment>
+  <portlet addview="portlets.News" remove="true" />
+  <portlet addview="portlets.Events" remove="true" />
+  <portlet addview="portlets.Classic" remove="true" />
+<!-- This assignment is useless and breaks tests -->
+<!-- <assignment name="ultime-notizie" category="context" key="/"
+    manager="plone.rightcolumn" type="plone.portlet.collection.Collection"
+    visible="True">
+  <property name="show_more">True</property>
+  <property name="header">Ultime notizie</property>
+  <property name="limit"/>
+  <property name="target_collection">/news/aggregator</property>
+  <property name="random">False</property>
+  <property name="show_dates">False</property>
+ </assignment>
+ <assignment name="ultimi-eventi" category="context" key="/"
+    manager="plone.rightcolumn" type="plone.portlet.collection.Collection"
+    visible="True">
+  <property name="show_more">True</property>
+  <property name="header">Ultimi eventi</property>
+  <property name="limit"/>
+  <property name="target_collection">/events/aggregator</property>
+  <property name="random">False</property>
+  <property name="show_dates">False</property>
+ </assignment>
+-->
+</portlets>

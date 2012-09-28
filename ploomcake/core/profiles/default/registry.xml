@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<registry>
+  <record field="globally_enabled" interface="plone.app.discussion.interfaces.IDiscussionSettings" name="plone.app.discussion.interfaces.IDiscussionSettings.globally_enabled">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description>help_globally_enabled</description>
+      <required>False</required>
+      <title>label_globally_enabled</title>
+    </field>
+    <value>True</value>
+  </record>
+
+
+  <record field="captcha" interface="plone.app.discussion.interfaces.IDiscussionSettings" name="plone.app.discussion.interfaces.IDiscussionSettings.captcha">
+    <field type="plone.registry.field.Choice">
+      <default>disabled</default>
+      <description>help_captcha</description>
+      <title>label_captcha</title>
+      <vocabulary>plone.app.discussion.vocabularies.CaptchaVocabulary</vocabulary>
+    </field>
+    <value>captcha</value>
+  </record>
+</registry>

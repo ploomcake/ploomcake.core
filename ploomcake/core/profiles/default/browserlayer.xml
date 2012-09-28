@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="ploomcake.core.browserlayer" 
+           interface="ploomcake.core.browser.interfaces.IPloomCakeCoreLayer" />
+    <layer name="ploomcake.core.language_browserlayer" 
+           interface="ploomcake.core.browser.interfaces.IPloomCakeCoreLanguageLayer" />
+</layers>

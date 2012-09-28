@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<portlets>
+ <assignment name="social-plugins" category="context" key="/"
+    manager="ContentWellPortlets.AbovePortletManager1"
+    type="collective.portlet.embed.Embed" visible="True">
+  <property name="header">social</property>
+  <property name="more_url"/>
+  <property name="footer"/>
+  <property name="text">
+   &lt;!--Facebook root--&gt;
+      
+   &lt;div id="fb-root"&gt;&lt;/div&gt;
+
+   &lt;!--Twitter--&gt;
+      
+   &lt;a href="https://twitter.com/share" class="twitter-share-button" data-count="none"&gt;Tweet&lt;/a&gt;
+   &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
+   
+   &lt;!--google plus--&gt;
+
+   &lt;div class="g-plusone" data-size="medium" data-annotation="none"&gt;&lt;/div&gt;
+
+   &lt;script type="text/javascript"&gt;
+     (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+   &lt;/script&gt;
+   
+   &lt;!--Facebook--&gt;
+      
+   &lt;script&gt;(function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;
+   &lt;div style="position:relative;top:-4px"  class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"&gt;&lt;/div&gt;
+   
+   &lt;!--pinterest--&gt;
+   &lt;!-- remove the comment to activate this social plugin
+   &lt;a href="http://pinterest.com/pin/create/button/" class="pin-it-button" count-layout="none"&gt;&lt;img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /&gt;&lt;/a&gt;
+   &lt;script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"&gt;&lt;/script&gt;
+   --&gt;
+   
+   &lt;!--linkedin--&gt;
+   &lt;!-- remove the comment to activate this social plugin
+   &lt;script src="//platform.linkedin.com/in.js" type="text/javascript"&gt;&lt;/script&gt;
+   &lt;script type="IN/Share"&gt;&lt;/script&gt;
+   --&gt;</property>
+  <property name="omit_border">True</property>
+ </assignment>
+
+</portlets>

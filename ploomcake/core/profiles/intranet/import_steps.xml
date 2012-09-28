@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="setup_default" version="20120224-02"
+               handler="ploomcake.core.setuphandlers.setupIntranet"
+               title="Various language related settings">
+ </import-step>
+</import-steps>

@@ -1,0 +1,9 @@
+<registry>
+
+    <record name="redomino.css3theme.classes">
+        <value purge="false" >
+            <element>version-full-width</element>
+        </value>
+    </record>
+
+</registry>

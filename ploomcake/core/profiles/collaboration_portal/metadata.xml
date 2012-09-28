@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1.1</version>
+    <dependencies>
+        <dependency>profile-ploomcake.core:default</dependency>
+        <dependency>profile-plone.formwidget.captcha:default</dependency>
+        <dependency>profile-redomino.tokenrole:default</dependency>
+        <dependency>profile-redomino.flowsearch:default</dependency>
+        <dependency>profile-redomino.advancedkeyword:default</dependency>
+    </dependencies>
+</metadata>

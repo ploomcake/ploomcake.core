@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="ploomcake.core">
+
+  <includeDependencies package="." />
+  <i18n:registerTranslations directory="locales" />
+  <include package=".browser" />
+  <include file="profiles.zcml" />
+  <include file="skins.zcml" />
+
+    <utility factory=".install_util.PloomCakeWebsiteCake"
+             name="ploomcake.cake.website"
+        />
+
+    <utility factory=".install_util.PloomCakeCollabPortalCake"
+             name="ploomcake.cake.collab"
+        />
+
+ <utility factory=".setuphandlers.HiddenProducts"
+           name="ploomcake.core.hiddenproducts" />
+
+  <utility factory=".setuphandlers.HiddenProfiles"
+           name="ploomcake.core.hiddenprofiles" />
+
+</configure>

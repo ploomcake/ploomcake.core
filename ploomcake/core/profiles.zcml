@@ -1,0 +1,54 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="ploomcake.core">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="PloomCake Core"
+      directory="profiles/default"
+      description='Extension profile for PloomCake Core.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+
+  <genericsetup:registerProfile
+      name="website"
+      title="PloomCake Website Cake"
+      directory="profiles/website"
+      description='This product sets up a Ploomcake Website Cake with all its dependecies.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+<!--
+  <genericsetup:registerProfile
+      name="intranet"
+      title="PloomCake Intranet Cake"
+      directory="profiles/intranet"
+      description='This product sets up a Ploomcake Intranet Cake with all its dependecies.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+-->
+  <genericsetup:registerProfile
+      name="collaboration portal"
+      title="PloomCake Collaboration Portal Cake"
+      directory="profiles/collaboration_portal"
+      description='This product sets up a Ploomcake Collaboration Portal Cake with all its dependecies.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+<!--
+ this is related to "website" only.
+ Removed from here because the languagetool import step is registered in 
+ import_step.xml (instead profile.zcml). When you add an import step in profile this cannot be a dependencies.
+ The dep. is checked every time while the import step is added after som time.
+ 
+  <genericsetup:importStep
+      name="ploomcake.core.various"
+      title="PloomCake Core: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="ploomcake.core.setuphandlers.setupVarious">
+    <depends name="languagetool"/>
+  </genericsetup:importStep>
+-->
+</configure>

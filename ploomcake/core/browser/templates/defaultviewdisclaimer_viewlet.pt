@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="ploomcake.core"
+      tal:omit-tag="">
+
+<tal:message condition="view/visible|nothing">
+    <dl class="portalMessage info">
+        <dt>Info</dt>
+        <dd>
+            <span i18n:translate="">You are viewing a content that is the default view for its
+            container but their workflow states are different.</span>
+            <a href="#" i18n:translate=""
+                tal:attributes="href python:view.container.absolute_url() + '/content_status_history'"
+                tal:content="view/message">
+                Click here
+            </a>
+            </dd>
+    </dl>
+</tal:message>
+</html>

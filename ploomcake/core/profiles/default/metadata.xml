@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1.1</version>
+    <dependencies>
+        <dependency>profile-Products.PloneFormGen:default</dependency>
+        <dependency>profile-collective.quickupload:default</dependency>
+        <dependency>profile-Products.ContentWellPortlets:default</dependency>
+        <dependency>profile-redomino.tinymceplugins.snippet:default</dependency>
+        <dependency>profile-redomino.tabsandslides:default</dependency>
+        <dependency>profile-redomino.protectdelete:default</dependency>
+        <dependency>profile-ploomcake.theme:default</dependency>
+        <dependency>profile-collective.portlet.actions:default</dependency>
+    </dependencies>
+</metadata>

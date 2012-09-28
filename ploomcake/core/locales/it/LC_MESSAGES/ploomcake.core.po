@@ -1,0 +1,42 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-23 15:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ploomcake.core\n"
+
+#: ../browser/viewlets.py:19
+msgid "Click here to change the container's workflow state"
+msgstr "Clicca qui per modificare lo stato di workflow del contenitore."
+
+#: ../browser/templates/defaultviewdisclaimer_viewlet.pt:12
+msgid "You are viewing a content that is the default view for its container but their workflow states are different."
+msgstr "Stai visualizzando un contenuto che è la vista predefinita del suo contenitore ma i loro stati di workflow sono diversi"
+
+#. Default: "Related to"
+#: ../browser/templates/document_reverserelateditems.pt:14
+msgid "label_reverse_related_items"
+msgstr "Correlato a"
+
+#. Default: "Install this for mixed intranet/internet websites"
+#: ../install_util.py:47
+msgid "ploomcake_collab_desc"
+msgstr "Installa questa per siti web misti intranet/extranet"
+
+#. Default: "Install this for public facing websites"
+#: ../install_util.py:37
+msgid "ploomcake_website_desc"
+msgstr "Installa questa per siti internet pubblici"
+

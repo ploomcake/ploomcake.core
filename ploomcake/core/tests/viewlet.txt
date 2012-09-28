@@ -1,0 +1,72 @@
+.. -*-doctest-*-
+
+================================
+Default view disclaimer Viewlet
+================================
+
+We use zope.testbrowser to simulate browser interaction in order to show how
+the viewlet works.
+
+Open a browser logged in as a Manager.
+
+    >>> app = layer['app']
+    >>> from plone.testing.z2 import Browser
+    >>> browser = Browser(app)
+    >>> browser.handleErrors = False
+    >>> browser.addHeader('Authorization', 'Basic admin:secret')
+    >>> portal_url = 'http://nohost/plone'
+
+By default, only HTTP error codes (e.g. 500 Server Side Error) are shown when an 
+error occurs on the server. To see more details, set handleErrors to False:
+
+    >>> browser.handleErrors = False
+
+    >>> portal = layer['portal']    
+    >>> portal.portal_workflow.setDefaultChain('simple_publication_workflow')
+
+    >>> import transaction
+    >>> transaction.commit()
+
+Create a folder.
+
+    >>> browser.open(portal_url)
+    >>> browser.getLink(id='folder').click()
+    >>> browser.getControl(name='title').value = "Folder1"
+    >>> browser.getControl(name='form.button.save').click()
+    >>> urlfolder1 = browser.url
+
+Create a page.
+    >>> browser.getLink(id='document').click()
+    >>> browser.getControl(name='title').value = "Doc1"
+    >>> browser.getControl(name='form.button.save').click()
+    >>> urldoc1 = browser.url
+
+Create a page.
+    >>> browser.open(urlfolder1)
+    >>> browser.getLink(id='document').click()
+    >>> browser.getControl(name='title').value = "Doc2"
+    >>> browser.getControl(name='text').value = "Text of the Doc2"
+    >>> browser.getControl(name='form.button.save').click()
+    >>> urldoc2 = browser.url
+
+Publish pages
+    >>> browser.open(urldoc1)
+    >>> browser.getLink(id='workflow-transition-publish').click()
+    >>> browser.open(urldoc2)
+    >>> browser.getLink(id='workflow-transition-publish').click()
+
+Select default page
+    >>> browser.open(urlfolder1)
+    >>> browser.getLink(id='contextSetDefaultPage').click()
+    >>> browser.getControl(label='Doc2').selected=True
+    >>> browser.getControl(name='form.button.Save').click()
+    >>> browser.open(urlfolder1)
+    >>> "You are viewing" in browser.contents
+    True
+
+==========================
+Reverse Related Viewlets
+==========================
+
+    >>> browser.open(urldoc1)
+    >>> #browser.getLink(id='contentview-edit').click()

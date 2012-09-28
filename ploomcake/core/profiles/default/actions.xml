@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <action-provider name="portal_actions"/>
+
+ <object name="object" meta_type="CMF Action Category">
+  <property name="title"></property>
+  <object name="folderContents" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Contents</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/getCurrentFolderUrl}/folder_contents</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="List folder contents"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
+ <object name="object_buttons" meta_type="CMF Action Category">
+  <property name="title"></property>
+  <object name="cut" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Cut</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$object_url/object_cut</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:${portal_url}/cut_icon.gif</property>
+   <property
+      name="available_expr">python:checkPermission("Delete objects", globals_view.getParentObject()) and checkPermission("Copy or Move", object) and not globals_view.isPortalOrPortalDefaultPage()</property>
+   <property name="permissions">
+    <element value="Delete objects"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="copy" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Copy</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$object_url/object_copy</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:${portal_url}/copy_icon.gif</property>
+   <property
+      name="available_expr">python:checkPermission("Copy or Move", object) and not globals_view.isPortalOrPortalDefaultPage()</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="paste" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Paste</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/getCurrentFolderUrl}/object_paste</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:${portal_url}/paste_icon.gif</property>
+   <property name="available_expr">folder/cb_dataValid|nothing</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="delete" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Delete</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$object_url/delete_confirmation</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:${portal_url}/delete_icon.gif</property>
+   <property
+      name="available_expr">python:checkPermission("Delete objects", globals_view.getParentObject()) and not globals_view.isPortalOrPortalDefaultPage()</property>
+   <property name="permissions">
+    <element value="Delete objects"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="rename" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Rename</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$object_url/object_rename</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:${portal_url}/rename_icon.gif</property>
+   <property
+      name="available_expr">python:checkPermission("Delete objects", globals_view.getParentObject()) and checkPermission("Copy or Move", object) and checkPermission("Add portal content", object) and not globals_view.isPortalOrPortalDefaultPage()</property>
+   <property name="permissions">
+    <element value="Add portal content"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+</object>

@@ -1,0 +1,77 @@
+<div id="portal-languageselector-wrapper">
+
+<tal:on-error on-error="nothing">
+    <tal:define define="content_language context/Language;
+                        request_language python:context.REQUEST.get('LANGUAGE', 'it');
+                        url_path python:'/' + '/'.join(context.REQUEST.get('VIRTUAL_URL_PARTS')[1:]) + '?set_language=' + content_language;
+                        dummy python:content_language!=request_language and context.REQUEST.RESPONSE.redirect(url_path) or None;
+                       ">
+    </tal:define>
+</tal:on-error>
+
+<dl class="actionMenu deactivated" id="portal-languageselector"
+    tal:condition="view/available"
+    tal:on-error="nothing"
+    tal:define="showFlags view/showFlags;
+                languages view/languages;
+                here_url context/absolute_url;
+                first_language view/first_language;
+                first_code first_language/code;
+                first_name first_language/native|first_language/name;
+                portal_url view/portal_url;">
+
+  
+  <dt tal:condition="python: len(languages) == 2">
+
+    <tal:language repeat="lang languages">
+        <a href=""
+           tal:define="code lang/code;
+                       selected lang/selected;
+                       codeclass string:language-${code};
+                       current python: selected and 'currentLanguage ' or '';
+                       name lang/native|lang/name;"
+           tal:attributes="href lang/url;
+                           title name;"
+           tal:content="name"
+           tal:condition="python: first_code != code">
+            action title
+        </a>
+    </tal:language>
+
+  </dt>
+
+
+  <dt tal:condition="python: len(languages) > 2"
+      class="actionMenuHeader">
+    <a id="first-language"
+        tal:attributes="href string:${here_url}/switchLanguage?set_language=${first_code}"
+        tal:content="first_name">
+        English
+    </a>
+  </dt>
+
+  <dd class="actionMenuContent">
+
+    <ul>
+        <tal:language repeat="lang languages">
+        <li tal:define="code lang/code;
+                        selected lang/selected;
+                        codeclass string:language-${code};
+                        current python: selected and 'currentLanguage ' or '';
+                        name lang/native|lang/name;"
+            tal:attributes="id string:languageselector-${code}"
+            tal:condition="python: first_code != code">
+            <a href=""
+               tal:attributes="href lang/url;
+                               title name;"
+               tal:content="name"
+               i18n:translate="">
+                action title
+            </a>
+        </li>
+        </tal:language>
+    </ul>
+  </dd>
+
+</dl>
+</div>
