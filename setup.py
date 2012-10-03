@@ -16,7 +16,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.5dev0'
+version = '1.5'
 
 setup(name='ploomcake.core',
       version=version,
