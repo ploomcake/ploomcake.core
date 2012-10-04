@@ -53,8 +53,6 @@ def setupWebsite(context):
 def setupCollaboration_portal(context):
     if context.readDataFile('ploomcake.core.collaboration_portal_various.txt') is None:
         return
-    site = context.getSite()
-    site.portal_purgepolicy.maxNumberOfVersionsToKeep = 0
 
 def setupIntranet(context):
     if context.readDataFile('ploomcake.core.intranet_various.txt') is None:
