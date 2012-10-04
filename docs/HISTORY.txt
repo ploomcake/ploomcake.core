@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6 (unreleased)
+1.6 (2012-10-04)
 ----------------
 
 - Fix the number of versions in portal_purgepolicy from 0 to 4.
