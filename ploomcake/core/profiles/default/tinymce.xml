@@ -3,4 +3,12 @@
  <resourcetypes purge="False">
   <link_using_uids value="True"/>
  </resourcetypes>
+ <layout>
+  <contextmenu value="False"/>
+ </layout>
+<!--
+ <toolbar>
+  <toolbar_spellchecker value="True"/>
+ </toolbar>
+-->
 </object>
