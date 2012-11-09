@@ -41,13 +41,13 @@ def setupWebsite(context):
     site = context.getSite()
     # create the language folders
     view = site.restrictedTraverse('@@language-setup-folders')
-    transaction.savepoint()
+    sp = transaction.savepoint()
     try:
         view(forceOneLanguage=True)
     except ConflictError:
         raise
     except Exception, e:
-        transaction.rollback()
+        sp.rollback()
 
 
 def setupCollaboration_portal(context):

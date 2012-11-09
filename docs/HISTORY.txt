@@ -5,6 +5,7 @@ Changelog
 ----------------
 
 - Deactivated tinymce contextual menu [sithmel]
+- fix setuphandler (uncorrectly handling exceptions) issue #1 [sithmel]
 
 
 1.6 (2012-10-04)
