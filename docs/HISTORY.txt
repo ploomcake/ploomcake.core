@@ -4,7 +4,7 @@ Changelog
 1.8 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Readme.txt updated [dpollino]
 
 
 1.7 (2012-11-09)
