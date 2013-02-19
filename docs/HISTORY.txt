@@ -5,7 +5,7 @@ Changelog
 ----------------
 
 - Readme.txt updated [dpollino]
-
+- added breadcrumbs to the related items popup [sithmel]
 
 1.7 (2012-11-09)
 ----------------

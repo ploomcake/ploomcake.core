@@ -41,4 +41,21 @@
       layer=".interfaces.IPloomCakeCoreLayer"
       />
 
+
+<!-- override related popup -->
+  <adapter for=".related_popup.ReferenceBrowserPopup"
+           factory=".related_popup.default_popup_template"
+           name="popup"
+           provides="zope.formlib.namedtemplate.INamedTemplate"
+           />
+
+  <browser:page
+      name="refbrowser_popup"
+      permission="zope2.Public"
+      for="*"
+      class=".related_popup.ReferenceBrowserPopup"
+      layer=".interfaces.IPloomCakeCoreLayer"
+      />
+
+
 </configure>
