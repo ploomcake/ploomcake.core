@@ -8,6 +8,7 @@
         <dependency>profile-redomino.tinymceplugins.snippet:default</dependency>
         <dependency>profile-redomino.tabsandslides:default</dependency>
         <dependency>profile-redomino.protectdelete:default</dependency>
+        <dependency>profile-redomino.redirectparent:default</dependency>
         <dependency>profile-ploomcake.theme:default</dependency>
         <dependency>profile-collective.portlet.actions:default</dependency>
     </dependencies>

@@ -4,6 +4,7 @@ Changelog
 1.8 (unreleased)
 ----------------
 
+- added redirectparent as products [sithmel]
 - Readme.txt updated [dpollino]
 - added breadcrumbs to the related items popup [sithmel]
 
