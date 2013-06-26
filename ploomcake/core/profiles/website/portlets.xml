@@ -37,7 +37,7 @@
      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;
-   &lt;div style="position:relative;top:-4px"  class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"&gt;&lt;/div&gt;
+   &lt;div class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"&gt;&lt;/div&gt;
    
    &lt;!--pinterest--&gt;
    &lt;!-- remove the comment to activate this social plugin

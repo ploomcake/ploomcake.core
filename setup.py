@@ -49,7 +49,6 @@ setup(name='ploomcake.core',
           'redomino.cache',
           'collective.portlet.embed',
           'ploomcake.theme',
-          'redomino.seosupport',
           'redomino.tokenrole',
           'redomino.protectdelete'
       ],

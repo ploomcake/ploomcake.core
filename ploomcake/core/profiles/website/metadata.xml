@@ -3,7 +3,7 @@
   <version>1.1</version>
     <dependencies>
         <dependency>profile-ploomcake.core:default</dependency>
-        <dependency>profile-redomino.seosupport:default</dependency>
+        <dependency>profile-collective.perseo:default</dependency>
         <dependency>profile-Products.LinguaPlone:LinguaPlone</dependency>
         <dependency>profile-collective.portlet.embed:default</dependency>
         <dependency>profile-plone.formwidget.captcha:default</dependency>
